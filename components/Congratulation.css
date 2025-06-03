@@ -103,7 +103,7 @@ body::after {
 }
 
 .top-logo {
-    position: absolute;
+/*     position: absolute; */
     top: 60px;
     left: 90px;
     max-width: 150px;
