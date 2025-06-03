@@ -1,0 +1,85 @@
+/* globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --background-dark: #0F1209;
+    --text-light: #ffffff;
+    --accent-green: #a4ff00;
+    --menu-bg-dark: #1A1D14;
+    --section-bg-dark: #141810;
+    --border-dark: #2A2E22;
+}
+
+body {
+    background: #0F1209;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* Animated background blobs */
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 50vw;
+    height: 50vh;
+    background: radial-gradient(circle, rgba(12, 247, 79, 0.3), transparent);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+    transform-origin: center;
+}
+
+body::before {
+    top: auto;
+    bottom: -20%;
+    left: -20%;
+    right: auto;
+    animation: blobLeftToCenter 12s ease-in-out infinite;
+}
+
+body::after {
+    top: -20%;
+    right: -20%;
+    bottom: auto;
+    left: auto;
+    animation: blobRightToCenter 12s ease-in-out infinite;
+}
+
+@keyframes blobLeftToCenter {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(50vw, -30vh) scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes blobRightToCenter {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50vw, 30vh) scale(1.5);
+        opacity: 1;
+    }
+}
