@@ -164,7 +164,7 @@ const WaitlistForm: React.FC = () => {
         <main className="main">
           <div className="breadcrumb-nav">
             <a href="/" className="breadcrumb-link">Home</a>
-            <span className="breadcrumb-separator">></span>
+            <span className="breadcrumb-separator">&gt;</span>
             <a className="breadcrumb-link">Join Waitlist</a>
           </div>
           <div className="title-div">
