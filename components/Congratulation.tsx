@@ -43,7 +43,7 @@ export default function Congratulation() {
       <div className="gradient-corner gradient-bottom-left"></div>
 
       <div className="container">
-        <img src="/logo.png" alt="TradeVed Logo" className="logo top-logo" />
+{/*         <img src="/logo.png" alt="TradeVed Logo" className="logo top-logo" /> */}
         <img src="/Vector (3).png" alt="Success Checkmark" className="checkmark-image" />
 
         <h1 className="congrats-title">Congratulations !!</h1>
